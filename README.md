@@ -16,7 +16,8 @@
     * [Simple Echo Program](#echo-program)
 	* [Cumulative Sum with BST](#cumulative-sum-program)
 	* [Selection Sort](#selection-sort)
-5. [Troubleshooting](#troubleshooting)
+5. [How to Get Setup](#getting-setup)
+6. [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
@@ -42,7 +43,6 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 * `[x] <- y` means store the value y into address x
 
 #### Legend
-
 
 |Instruction     |Operation       |Description                                      | 
 |----------------|----------------|-------------------------------------------------|
@@ -88,6 +88,7 @@ There are two functions provided for executing programs.
 
 Commonly, `load_address` and `instruction_pointer_address` are default to 0
 
+Any input will be prompted by ">" and any output will be preceeded with "<".
 
 ## Examples
 
@@ -125,6 +126,48 @@ The output of the program, given an input of 1 200 999 0, is:
 
 #### Selection Sort
 
+## Getting Setup
+
+1. Downoad the repository by clicking Download ZIP under code.
+
+<img src="assets/download-repository.png" width="50px">
+
+2. Open the file with a text editor like Visual Studio Code (VS Code).
+
+3. Open the cpu.py file and at the bottom create a variable called instructions and set it as an empty list. Fill the list with the program with each instruction seperated by a comma. Then call the run_and_return function. It should look like:
+
+```python
+# program to sum 2 numbers
+instructions = [
+	3, # [0]: IPA, first instruction is at address 3
+	0, # [1]: address to store input 1
+	0, # [2]: address to store input 2
+	6, # [3]: address to store sum
+	1001000000,  # [1] <- read      | read input and store at address 1
+	1002000000,  # [2] <- read      | read input and store at address 2
+	7003001002,  # [3] <- [1] + [2] | sum the values stored at addresses 1 and 2 and store it in address 3
+	2000003000,  # display <- [3]   | display the value stored at address 3
+	0000000000  # stop the program
+]
+
+run_and_return(instructions, 0, 0)
+```
+
+Note that the last value in the list does not have a comma after it.
+
+4. To run the program in VS Code, install an extension called Python. Click the extension page on the left side and search for python. Install the first extension.
+
+<img src="assets/extension.png" width="50px">
+
+5. Go back to the cpu.py file and press the green run button in the top right corner
+
+<img src="assets/run.png" width="50px">
+
+6. If your program takes input, there will be a prompt at the bottom in the terminal. Type the input there and press enter.
+
+<img src="assets/prompt.png" width="50px">
+
+7. Input prompts are represented by ">" and outputs of the program are represented by "<".
 
 
 ## Troubleshooting 
