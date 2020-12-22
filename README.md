@@ -51,7 +51,7 @@ td {
 
 |Instruction     |Operation       |Function                                     |Description                                                      |
 |----------------|----------------|---------------------------------------------|-----------------------------------------------------------------|
-|` 0000000000`   |halt            |`end program`                                |Terminate the program                                            |     
+|` 0000000000`   |halt            |`end program`                                |<sub>Terminate the program</sub>                                         |     
 |` 1ttt000000`   |read            |`[ttt] <- read`                              |read an input and store at ttt                                   |          
 |` 2000uuu000`   |display         |`display <- [uuu]`                           |display [uuu]                                                    |
 |` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                             |copy [uuu] into ttt                                              |
