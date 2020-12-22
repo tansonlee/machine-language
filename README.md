@@ -57,10 +57,10 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 |` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |
 |` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |
 |`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |
-|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |
-|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |
-|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |
-|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |
+|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋ given [vvv] != 0`       |
+|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1 if [uuu] === 0`            |
+|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1 if [uuu] === [vvv]`        |
+|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1 if [uuu] > [vvv]`          |
 
 
 ## Details on the Language
