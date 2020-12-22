@@ -130,7 +130,7 @@ The output of the program, given an input of 1 200 999 0, is:
 
 1. Downoad the repository by clicking Download ZIP under code.
 
-<img src="assets/download-repository.png" width="50px">
+<img src="assets/download-repository.png" width="200px">
 
 2. Open the file with a text editor like Visual Studio Code (VS Code).
 
@@ -157,15 +157,15 @@ Note that the last value in the list does not have a comma after it.
 
 4. To run the program in VS Code, install an extension called Python. Click the extension page on the left side and search for python. Install the first extension.
 
-<img src="assets/extension.png" width="50px">
+<img src="assets/extension.png" width="200px">
 
 5. Go back to the cpu.py file and press the green run button in the top right corner
 
-<img src="assets/run.png" width="50px">
+<img src="assets/run.png" width="200px">
 
 6. If your program takes input, there will be a prompt at the bottom in the terminal. Type the input there and press enter.
 
-<img src="assets/prompt.png" width="50px">
+<img src="assets/prompt.png" width="200px">
 
 7. Input prompts are represented by ">" and outputs of the program are represented by "<".
 
