@@ -44,23 +44,23 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 #### Legend
 
 
-|Instruction     |Operation       |Description                                  | 
-|----------------|----------------|---------------------------------------------|
-|` 0000000000`   |halt            |`end program`                                |
-|` 1ttt000000`   |read            |`[ttt] <- read`                              |       
-|` 2000uuu000`   |display         |`display <- [uuu]`                           |
-|` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                             |
-|` 4tttuuu000`   |fetch           |`[ttt] <- [[uuu]]`                           |
-|` 5tttuuu000`   |store           |`[[ttt]] <- [uuu]`                           |
-|` 6ttt000000`   |add1            |`[ttt] <- [ttt] + 1`                         |
-|` 7tttuuuvvv`   |add             |`[ttt] <- [uuu] + [vvv]`                     |
-|` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |
-|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |
-|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |
-|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋ given [vvv] != 0`       |
-|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1 if [uuu] === 0`            |
-|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1 if [uuu] === [vvv]`        |
-|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1 if [uuu] > [vvv]`          |
+|Instruction     |Operation       |Description                                      | 
+|----------------|----------------|-------------------------------------------------|
+|` 0000000000`   |halt            |`end program`                                    |
+|` 1ttt000000`   |read            |`[ttt] <- read`                                  |       
+|` 2000uuu000`   |display         |`display <- [uuu]`                               |
+|` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                                 |
+|` 4tttuuu000`   |fetch           |`[ttt] <- [[uuu]]`                               |
+|` 5tttuuu000`   |store           |`[[ttt]] <- [uuu]`                               |
+|` 6ttt000000`   |add1            |`[ttt] <- [ttt] + 1`                             |
+|` 7tttuuuvvv`   |add             |`[ttt] <- [uuu] + [vvv]`                         |
+|` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                     |
+|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`                 |
+|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                         |
+|`11tttuuuvvv`   |divide          |`[ttt] <- floor([uuu] / [vvv]) given [vvv] != 0` |
+|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1 if [uuu] === 0`              |
+|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1 if [uuu] === [vvv]`          |
+|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1 if [uuu] > [vvv]`            |
 
 
 ## Details on the Language
