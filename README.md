@@ -55,12 +55,12 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 |` 6ttt000000`   |add1            |`[ttt] <- [ttt] + 1`                         |add 1 to [ttt]                                                   |
 |` 7tttuuuvvv`   |add             |`[ttt] <- [uuu] + [vvv]`                     |add [uuu] to [vvv]; store it in ttt                              |
 |` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |subtract 1 from [ttt]; if negative, store 0                      |
-|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |subtract [uuu] by [vvv] and store in ttt;<br>if negative, store 0   |
-|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |multiply [uuu] by [vvv] and store in ttt                         |
-|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |divide [uuu] by [vvv] and tore in ttt<br>if [vvv] is not 0         |
+|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |subtract [uuu] by [vvv] and store<br>in ttt; if negative, store 0   |
+|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |multiply [uuu] by [vvv] and store<br>in ttt                         |
+|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |divide [uuu] by [vvv] and store<br>in ttt if [vvv] is not 0         |
 |`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |if [uuu] is 0, add 1 to [ttt]                                    |
 |`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |if [uuu] equals [vvv], add 1 to [ttt]                            |
-|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |if [uuu] is greater than [vvv], add 1 to [ttt]                   |
+|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |if [uuu] is greater than [vvv],<br>add 1 to [ttt]                   |
 
 
 ## Details on the Language
