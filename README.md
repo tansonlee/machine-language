@@ -57,7 +57,7 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 |` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |<sub>subtract 1 from [ttt]; if negative, store 0</sub>                      |
 |` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |<sub>subtract [uuu] by [vvv] and store in ttt; if negative, store 0</sub>   |
 |`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |<sub>multiply [uuu] by [vvv] and store in ttt</sub>                         |
-|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |<sub>divide [uuu] by [vvv] and store in ttt if [vvv] is not 0</sub>         |
+|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |<sub>divide [uuu] by [vvv]; store in ttt if [vvv] is not 0</sub>         |
 |`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |<sub>if [uuu] is 0, add 1 to [ttt]</sub>                                    |
 |`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |<sub>if [uuu] equals [vvv], add 1 to [ttt]</sub>                            |
 |`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |<sub>if [uuu] is greater than [vvv], add 1 to [ttt]</sub>                   |
