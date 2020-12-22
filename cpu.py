@@ -219,11 +219,11 @@ def cpu(ram, IPA):
 		
 	return cycle(ram)
 		
-def run_and_return(instructions):
-	return cpu(ram_load(ram, 0, instructions), 0)
+def run_and_return(instructions, load_address, instruction_pointer_address):
+	return cpu(ram_load(ram, load_address, instructions), instruction_pointer_address)
 
-def run_and_dump(instructions):
-	core_dump(cpu(ram_load(ram, 0, instructions), 0))
+def run_and_dump(instructions, load_address, instruction_pointer_address):
+	core_dump(cpu(ram_load(ram, load_address, instructions), instruction_pointer_address))
 
 
 
