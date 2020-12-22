@@ -44,23 +44,23 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 #### Legend
 
 
-|Instruction     |Operation       |Function                                     |Description                                                      |
-|----------------|----------------|---------------------------------------------|-----------------------------------------------------------------|
-|` 0000000000`   |halt            |`end program`                                |Terminate the program                                         |     
-|` 1ttt000000`   |read            |`[ttt] <- read`                              |read an input and store at ttt                                   |          
-|` 2000uuu000`   |display         |`display <- [uuu]`                           |display [uuu]                                                    |
-|` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                             |copy [uuu] into ttt                                              |
-|` 4tttuuu000`   |fetch           |`[ttt] <- [[uuu]]`                           |fetch the value [uuu] points to;<br>copy it to ttt                  |
-|` 5tttuuu000`   |store           |`[[ttt]] <- [uuu]`                           |store [uuu] at the address<br>[ttt] points to                       |
-|` 6ttt000000`   |add1            |`[ttt] <- [ttt] + 1`                         |add 1 to [ttt]                                                   |
-|` 7tttuuuvvv`   |add             |`[ttt] <- [uuu] + [vvv]`                     |add [uuu] to [vvv]; store it in ttt                              |
-|` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |subtract 1 from [ttt]; if negative,<br>store 0                      |
-|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |subtract [uuu] by [vvv] and<br>store in ttt; if negative, store 0   |
-|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |multiply [uuu] by [vvv] and<br>store in ttt                         |
-|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |divide [uuu] by [vvv] and store<br>in ttt if [vvv] is not 0         |
-|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |if [uuu] is 0, add 1 to [ttt]                                    |
-|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |if [uuu] equals [vvv], add 1 to [ttt]                            |
-|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |if [uuu] is greater than [vvv],<br>add 1 to [ttt]                   |
+|Instruction     |Operation       |Description                                  | 
+|----------------|----------------|---------------------------------------------|
+|` 0000000000`   |halt            |`end program`                                |
+|` 1ttt000000`   |read            |`[ttt] <- read`                              |       
+|` 2000uuu000`   |display         |`display <- [uuu]`                           |
+|` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                             |
+|` 4tttuuu000`   |fetch           |`[ttt] <- [[uuu]]`                           |
+|` 5tttuuu000`   |store           |`[[ttt]] <- [uuu]`                           |
+|` 6ttt000000`   |add1            |`[ttt] <- [ttt] + 1`                         |
+|` 7tttuuuvvv`   |add             |`[ttt] <- [uuu] + [vvv]`                     |
+|` 8ttt000000`   |subtract1       |`[ttt] <- max([ttt] - 1, 0)`                 |
+|` 9tttuuuvvv`   |subtract        |`[ttt] <- max([uuu] - [vvv], 0)`             |
+|`10tttuuuvvv`   |multiply        |`[ttt] <- [uuu] * [vvv]`                     |
+|`11tttuuuvvv`   |divide          |`[ttt] <- ⌊[uuu] / [vvv]⌋; [vvv] != 0`       |
+|`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |
+|`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |
+|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |
 
 
 ## Details on the Language
