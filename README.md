@@ -43,7 +43,12 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 
 #### Legend
 
-<div style="font-size: 10px">
+<style>
+td {
+  font-size: 50px
+}
+</style>
+
 |Instruction     |Operation       |Function                                     |Description                                                      |
 |----------------|----------------|---------------------------------------------|-----------------------------------------------------------------|
 |` 0000000000`   |halt            |`end program`                                |Terminate the program                                            |     
@@ -61,7 +66,7 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 |`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1; [uuu] === 0`            |if [uuu] is 0, add 1 to [ttt]                                    |
 |`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1; [uuu] === [vvv]`        |if [uuu] equals [vvv], add 1 to [ttt]                            |
 |`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1; [uuu] > [vvv]`          |if [uuu] is greater than [vvv], add 1 to [ttt]                   |
-</div>
+
 
 ## Details on the Language
 
