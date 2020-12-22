@@ -43,15 +43,10 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 
 #### Legend
 
-<style>
-td {
-  font-size: 50px
-}
-</style>
 
 |Instruction     |Operation       |Function                                     |Description                                                      |
 |----------------|----------------|---------------------------------------------|-----------------------------------------------------------------|
-|` 0000000000`   |halt            |`end program`                                |<font size="+10">Terminate the program</font>                                         |     
+|` 0000000000`   |halt            |`end program`                                |<font size="3px">Terminate the program</font>                                         |     
 |` 1ttt000000`   |read            |`[ttt] <- read`                              |read an input and store at ttt                                   |          
 |` 2000uuu000`   |display         |`display <- [uuu]`                           |display [uuu]                                                    |
 |` 3tttuuu000`   |copy            |`[ttt] <- [uuu]`                             |copy [uuu] into ttt                                              |
