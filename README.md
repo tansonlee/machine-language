@@ -25,6 +25,12 @@ This program is based on the Von Neumann Architecture which is a stored program 
 This program uses an implementaiton of a CPU requiring a program loader and fetch-evaluation cycle.
 It also uses an implemetation of a RAM which can be found here: <br>[RAM Implentation](https://github.com/tansonlee/ram)
 
+This implementation uses Python lists to write instructions.
+The instructions in the list are then loaded into RAM to be executed.
+A fetch-evaluation cycle is used to execute the instruction that the Instruction Pointer points to.
+The instruction pointer increments by 1 after each cycle.
+The program ends when the halt instruction is executed.
+
 ## Operation Code Legend
 
 #### Instruction Format
@@ -171,3 +177,5 @@ Note that the last value in the list does not have a comma after it.
 
 
 ## Troubleshooting 
+
+#### Stack Overflow Maximum recursioin depth exceeded
