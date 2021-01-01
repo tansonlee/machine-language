@@ -18,6 +18,9 @@
 	* [Selection Sort](#selection-sort)
 5. [How to Get Setup](#getting-setup)
 6. [Troubleshooting](#troubleshooting)
+	* [Tips](#tips)
+	* [Recursion Error](#RecursionError:-maximum-recursion-depth-exceeded)
+	* [Common Mistakes](#common-mistakes)
 
 ## Introduction
 
@@ -30,6 +33,9 @@ The instructions in the list are then loaded into RAM to be executed.
 A fetch-evaluation cycle is used to execute the instruction that the Instruction Pointer points to.
 The instruction pointer increments by 1 after each cycle.
 The program ends when the halt instruction is executed.
+
+More enhanced features are also included that would not be found in many Reduced Instruction Set Computers.
+These include the equality and inequality operators.
 
 ## Operation Code Legend
 
@@ -178,4 +184,53 @@ Note that the last value in the list does not have a comma after it.
 
 ## Troubleshooting 
 
-#### Stack Overflow Maximum recursioin depth exceeded
+#### Tips
+
+Write useful comments. One way to organize the comments for each instruction is to first say how that instruction changes RAM then explain in words what it is doing for your program.
+For example:
+
+```python
+# program to sum 2 numbers
+instructions = [
+	4, # [0]: IPA, first instruction is at address 4
+	0, # [1]: address to store input 1
+	0, # [2]: address to store input 2
+	0, # [3]: address to store sum
+	1001000000,  # [1] <- read      | read input and store at address 1
+	1002000000,  # [2] <- read      | read input and store at address 2
+	7003001002,  # [3] <- [1] + [2] | sum the values stored at addresses 1 and 2 and store it in address 3
+	2000003000,  # display <- [3]   | display the value stored at address 3
+	0000000000  # stop the program
+]
+
+run_and_return(instructions, 0, 0)
+```
+
+The fifth value in the list is an instruction.
+The comment first says how the instruction changes RAM (`[1] <- read`).
+Then what it does in words (`read input and store at address 1`).
+
+This method is useful for debugging.
+
+
+#### RecursionError: maximum recursion depth exceeded
+
+This error is usually caused by long programs that execute the fetch-evaluate cyclea very large amount of times.
+Python is not optimized for functional programming so a maximum recursion depth is enforced.
+
+This can be fixed by increasing the maximum recursion depth in the cpu.py, ram.py and trie.py files.
+The top of these files shoul include:
+
+```python
+import sys
+sys.setrecursionlimit(2500)
+```
+
+Double the value 2500 to 5000 and try again.
+Keep doubling the value until the error stops.
+If it gets to a ridiculous value, there may be another issue, for example infinite looping and the program does not halt.
+
+#### Common Mistakes
+
+A common mistake is to forget to store the address of the first instruction in the Instruction Pointer Address.
+Remember to put the address of the first instruction in the IPA (commonly address 0)

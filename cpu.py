@@ -224,7 +224,3 @@ def run_and_return(instructions, load_address, instruction_pointer_address):
 
 def run_and_dump(instructions, load_address, instruction_pointer_address):
 	core_dump(cpu(ram_load(ram, load_address, instructions), instruction_pointer_address))
-
-
-
-
