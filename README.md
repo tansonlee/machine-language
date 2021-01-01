@@ -145,10 +145,10 @@ The output of the program, given an input of 1 200 999 0, is:
 ```python
 # program to sum 2 numbers
 instructions = [
-	3, # [0]: IPA, first instruction is at address 3
+	4, # [0]: IPA, first instruction is at address 4
 	0, # [1]: address to store input 1
 	0, # [2]: address to store input 2
-	6, # [3]: address to store sum
+	0, # [3]: address to store sum
 	1001000000,  # [1] <- read      | read input and store at address 1
 	1002000000,  # [2] <- read      | read input and store at address 2
 	7003001002,  # [3] <- [1] + [2] | sum the values stored at addresses 1 and 2 and store it in address 3
