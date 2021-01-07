@@ -2,7 +2,7 @@
 
 ## A Machine Language Designed and Implemented my Me
 
-A runnable version of the project can be found here: [My Machine Language](https://repl.it/@TansonL/machine-language).
+A runnable version of the project can be found here: [My Machine Language](https://repl.it/@TansonL/machine-language).<br>
 Instructions on how to run it can be found here: [Instructions](#online-through-repl.it)
 
 ## Table of Contents
