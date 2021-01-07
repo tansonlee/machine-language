@@ -3,7 +3,7 @@
 ## A Machine Language Designed and Implemented my Me
 
 A runnable version of the project can be found here: [My Machine Language](https://repl.it/@TansonL/machine-language).<br>
-Instructions on how to run it can be found here: [Instructions](#online-through-repl.it)
+Instructions on how to run it can be found here: [Instructions](#online-through-replit)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -20,7 +20,7 @@ Instructions on how to run it can be found here: [Instructions](#online-through-
 	* [Cumulative Sum with BST](#cumulative-sum-program)
 	* [Selection Sort](#selection-sort)
 5. [How to Get Setup](#getting-setup)
-	* [Online Through repl.it](#online-through-repl.it)
+	* [Online Through repl.it](#online-through-replit)
 	* [Offline Through a Text Editor](#offline-in-a-text-editor)
 6. [Troubleshooting](#troubleshooting)
 	* [Tips](#tips)
