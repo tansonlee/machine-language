@@ -24,7 +24,7 @@ Instructions on how to run it can be found here: [Instructions](#online-through-
 	* [Offline Through a Text Editor](#offline-in-a-text-editor)
 6. [Troubleshooting](#troubleshooting)
 	* [Tips](#tips)
-	* [Recursion Error](#RecursionError:-maximum-recursion-depth-exceeded)
+	* [Recursion Error](#recursionerror-maximum-recursion-depth-exceeded)
 	* [Common Mistakes](#common-mistakes)
 
 ## Introduction
