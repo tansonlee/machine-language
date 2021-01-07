@@ -2,6 +2,9 @@
 
 ## A Machine Language Designed and Implemented my Me
 
+A runnable version of the project can be found here: [My Machine Language](https://repl.it/@TansonL/machine-language).
+Instructions on how to run it can be found here: [Instructions](#online-through-repl.it)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Operation Code Legend](#operation-code-legend)
@@ -17,6 +20,8 @@
 	* [Cumulative Sum with BST](#cumulative-sum-program)
 	* [Selection Sort](#selection-sort)
 5. [How to Get Setup](#getting-setup)
+	* [Online Through repl.it](#online-through-repl.it)
+	* [Offline Through a Text Editor](#offline-in-a-text-editor)
 6. [Troubleshooting](#troubleshooting)
 	* [Tips](#tips)
 	* [Recursion Error](#RecursionError:-maximum-recursion-depth-exceeded)
@@ -142,13 +147,27 @@ The output of the program, given an input of 1 200 999 0, is:
 
 ## Getting Setup
 
+### Online Through repl.it
+
+1. Click the following link: [Machine Language](https://repl.it/@TansonL/machine-language).
+
+2. On the left side, click the main.py file.
+
+3. Delete the current code in this file and write in your own program. Examples of this can be found here: [Examples](#examples)
+
+4. You may need to create a repl.it account to write your own code.
+
+5. Press the green Run button at the top and the program's input and output should be in the terminal. "`>`" represents a prompt for input and "`<`" represents an output.
+
+### Offline in a Text Editor
+
 1. Downoad the repository by clicking Download ZIP under code.
 
 <img src="assets/download-repository.png" width="300px">
 
 2. Open the file with a text editor like Visual Studio Code (VS Code).
 
-3. Open the cpu.py file and at the bottom create a variable called instructions and set it as an empty list. Fill the list with the program with each instruction seperated by a comma. Then call the run_and_return function. It should look like:
+3. Open the main.py file and remove the code currently there. Create a variable called instructions and set it as an empty list. Fill the list with the program with each instruction seperated by a comma. Then call the run_and_return function. It should look like:
 
 ```python
 from cpu import run_and_return
@@ -169,13 +188,13 @@ instructions = [
 run_and_return(instructions, 0, 0)
 ```
 
-Note that the last value in the list does not have a comma after it.
+*Note that the last value in the list does not have a comma after it.*
 
 4. To run the program in VS Code, install an extension called Python. Click the extension page on the left side and search for python. Install the first extension.
 
 <img src="assets/extension.png" width="300px">
 
-5. Go back to the cpu.py file and press the green run button in the top right corner
+5. Go back to the main.py file and press the green run button in the top right corner
 
 <img src="assets/run.png" width="300px">
 
