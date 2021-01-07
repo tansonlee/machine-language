@@ -108,6 +108,8 @@ Any input will be prompted by ">" and any output will be preceeded with "<".
 Simple echo program. The program will be loaded at address 0 and the IPA is 0.
 
 ```python
+from cpu import run_and_return
+
 instructions = [
 	3, # [0]: IPA, first instruction is at address 3
 	0, # [1]: address to store input
@@ -149,6 +151,8 @@ The output of the program, given an input of 1 200 999 0, is:
 3. Open the cpu.py file and at the bottom create a variable called instructions and set it as an empty list. Fill the list with the program with each instruction seperated by a comma. Then call the run_and_return function. It should look like:
 
 ```python
+from cpu import run_and_return
+
 # program to sum 2 numbers
 instructions = [
 	4, # [0]: IPA, first instruction is at address 4
@@ -190,6 +194,8 @@ Write useful comments. One way to organize the comments for each instruction is 
 For example:
 
 ```python
+from cpu import run_and_return
+
 # program to sum 2 numbers
 instructions = [
 	4, # [0]: IPA, first instruction is at address 4
