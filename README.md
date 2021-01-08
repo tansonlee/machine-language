@@ -61,7 +61,9 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 
 #### Legend
 
-|Instruction     |Operation       |Description                                      | 
+![Legend](assets/legend.png)
+
+<!-- |Instruction     |Operation       |Description                                      | 
 |----------------|----------------|-------------------------------------------------|
 |` 0000000000`   |halt            |`end program`                                    |
 |` 1ttt000000`   |read            |`[ttt] <- read`                                  |       
@@ -77,7 +79,7 @@ Each instruction is formatted as follows: `XXtttuuuvvv`
 |`11tttuuuvvv`   |divide          |`[ttt] <- floor([uuu] / [vvv]) given [vvv] != 0` |
 |`12tttuuu000`   |if zero add1    |`[ttt] <- [ttt] + 1 if [uuu] === 0`              |
 |`13tttuuuvvv`   |if equal add1   |`[ttt] <- [ttt] + 1 if [uuu] === [vvv]`          |
-|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1 if [uuu] > [vvv]`            |
+|`14tttuuuvvv`   |if greater add1 |`[ttt] <- [ttt] + 1 if [uuu] > [vvv]`            | -->
 
 
 ## Details on the Language
